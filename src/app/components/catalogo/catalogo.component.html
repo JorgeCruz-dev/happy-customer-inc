@@ -2,9 +2,9 @@
 <div class="card" *ngFor="let producto of productos">
     <div class="card-body bg-light">
         <h5 class="card-title">{{producto.nombre}} - {{producto.marca}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">
+        <p class="card-subtitle mb-2 text-muted">
             {{producto.id}}
-        </h6>
+        </p>
         <p class="card-text">
            $ {{producto.precio}}
         </p>
@@ -15,6 +15,7 @@
             data-toggle="modal" 
             data-target="#exampleModal">Editar producto</button>
     </div>
+    <br>
 </div>
 
 <!-- Modal para editar -->
