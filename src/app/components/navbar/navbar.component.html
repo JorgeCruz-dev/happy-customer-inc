@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">{{app_name}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="['/home']"
+                [routerLinkActive]="['active']"
+              >
+                <span class="fas fa-home" aria-hidden="true"></span>
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="['/administracion']"
+                [routerLinkActive]="['active']"
+                *ngIf="isLogged"
+              >
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                Administracion</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="['/login']"
+                [routerLinkActive]="['active']"
+                *ngIf="!isLogged"
+              >
+                <span class="fas fa-gifts" aria-hidden="true"></span>
+                Login
+              </a>
+            </li>
+            <li class="nav-item">
+                <a
+                  class="nav-link"
+                  [routerLink]="['/login']"
+                  [routerLinkActive]="['active']"
+                  *ngIf="isLogged"
+                >
+                  <span class="fas fa-gifts" aria-hidden="true"></span>
+                  Logout
+                </a>
+              </li>
+          </ul>
+    </div>
+  </nav>

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cursoFirebaseEjercicios"
+    }
+  },
+  "defaultProject": "cursoFirebaseEjercicios",
+  "cli": {
+    "analytics": "60dc1220-11a0-424f-8277-56e3bab110f3"
+  }
 }
