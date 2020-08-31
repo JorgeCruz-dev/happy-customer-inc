@@ -34,4 +34,8 @@ export class AuthService {
         this.usuario = {};
         this._afAuth.signOut();
     }
+
+    isLogged(){
+        return this.usuario.uid ?  true : false; 
+    }
 }

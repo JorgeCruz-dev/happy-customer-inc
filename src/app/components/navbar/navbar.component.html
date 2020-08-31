@@ -20,7 +20,7 @@
                 class="nav-link"
                 [routerLink]="['/administracion']"
                 [routerLinkActive]="['active']"
-                *ngIf="isLogged"
+                *ngIf="_authS.usuario.uid"
               >
                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 Administracion</a
@@ -31,7 +31,7 @@
                 class="nav-link"
                 [routerLink]="['/login']"
                 [routerLinkActive]="['active']"
-                *ngIf="!isLogged"
+                *ngIf="!_authS.usuario.uid"
               >
                 <span class="fas fa-gifts" aria-hidden="true"></span>
                 Login
@@ -42,7 +42,7 @@
                   class="nav-link"
                   [routerLink]="['/login']"
                   [routerLinkActive]="['active']"
-                  *ngIf="isLogged"
+                  *ngIf="_authS.usuario.uid"
                 >
                   <span class="fas fa-gifts" aria-hidden="true"></span>
                   Logout

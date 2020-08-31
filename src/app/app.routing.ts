@@ -5,13 +5,15 @@ import { ListaProductos } from './components/listaProductos/listaProductos.compo
 import { AdministracionComponent  }  from './components/administracion/administracion.component'
 import { LoginComponent } from './components/login/login.component'
 
+import { AuthGuard } from '../app/services/auth-guard.service'
+
 //Definir las rutas
 const appRoutes: Routes = [
     //cuando la ruta esta vacia
     { path: "", component: ListaProductos},
     //Cuando se pone el nombre del component en la ruta
     {path: "home", component: ListaProductos },
-    {path: "administracion", component: AdministracionComponent },
+    {path: "administracion", component: AdministracionComponent, canActivate: [AuthGuard] },
     {path: "login", component: LoginComponent },
 
     //Cuando no existe
