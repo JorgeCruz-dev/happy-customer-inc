@@ -13,7 +13,9 @@ export class AddProducto implements OnInit {
         nombre: '',
         marca: '',
         precio: '',
-        uid: ''
+        uid: '',
+        photoURL: '',
+        nombreUsuario: ''
     }
 
     constructor(private _conexion: ConexionService, public _authS: AuthService) {
@@ -24,6 +26,8 @@ export class AddProducto implements OnInit {
     }
 
     agregar() {
+        this.producto.nombreUsuario = this._authS.usuario.nombre;
+        this.producto.photoURL = this._authS.usuario.photoURL;
         this.producto.uid = this._authS.usuario.uid;
         this._conexion.addProducto(this.producto);
     }

@@ -10,14 +10,14 @@ import { AuthGuard } from '../app/services/auth-guard.service'
 //Definir las rutas
 const appRoutes: Routes = [
     //cuando la ruta esta vacia
-    { path: "", component: ListaProductos},
+    { path: "", component: LoginComponent},
     //Cuando se pone el nombre del component en la ruta
     {path: "home", component: ListaProductos },
     {path: "administracion", component: AdministracionComponent, canActivate: [AuthGuard] },
     {path: "login", component: LoginComponent },
 
     //Cuando no existe
-    {path: "**", component: ListaProductos }
+    {path: "**", component: LoginComponent }
 
 ]
 
